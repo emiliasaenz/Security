@@ -7,15 +7,44 @@ In this section, you will research various classical cryptography topics. Each t
 ### 1. The Substitution Cipher
 
 1. What is the substitution cipher and how does it differ from the shift cipher?
+
+In a substitution cipher, each character in the plaintext is replaced by any different letter, following a specific system that can vary throughout the message depending on a key. This method allows for a wide range of substitutions, making the key more complex and the cipher generally more secure against basic decryption methods like frequency analysis.
+
+<img width="637" alt="Captura de pantalla 2024-01-27 a la(s) 20 06 42" src="https://github.com/emiliasaenz/Security/assets/143628612/6924b02f-5349-4c63-8255-95d396c3eecd">
+
+A shift cipher, involves a simpler and more uniform substitution method. The alphabet is shifted a fixed number of places either up or down. This uniform shift means the key is simply the number of positions the alphabet is shifted, making it less complex and less secure. With only 26 possible variations in the English alphabet, shift ciphers are more susceptible to being broken, especially through frequency analysis
+
+<img width="579" alt="Captura de pantalla 2024-01-27 a la(s) 20 07 15" src="https://github.com/emiliasaenz/Security/assets/143628612/c3e5d5da-49e8-4dae-af05-f2be333fd165">
+
 2. How can you create a substitution cipher using a keyword or a random permutation?
+
+To create a substitution cipher using a keyword, generate a keyword that serves as the key and defines how letters from the cipher alphabet correspond to those in the plain alphabet. Any repeated letters in the keyword are first eliminated. Following this, the cipher alphabet is constructed by aligning the letters of the keyword with A, B, C, and so forth, until all letters in the keyword are utilized. Subsequently, the remaining letters of the cipher alphabet are arranged in their usual alphabetical sequence, while skipping any letters that were already included as part of the key.
+
+<img width="647" alt="Captura de pantalla 2024-01-27 a la(s) 20 13 14" src="https://github.com/emiliasaenz/Security/assets/143628612/eb8aa6da-51df-44e7-a562-c648a83097bf">
+
+To create a substitution cipher using a random permutation, generate a random shuffle of the alphabet, where each letter is uniquely mapped to another. This shuffled list forms the key. Encrypt the plaintext by substituting each letter with its corresponding letter in the random permutation. While this method offers better security than simple ciphers like the shift cipher, it can still be vulnerable to frequency analysis, especially in longer texts. The effectiveness of this cipher heavily relies on the randomness and unpredictability of the permutation.
+
 3. What are the advantages and disadvantages of the substitution cipher?
+
+Advantages: 
+- Easy and straightforward to understand and implement
+- Offers better security than simple shift ciphers due to a larger number of possible keys
+- Faster to execute compared to complex encryption algorithms
+
+Disadvantages:
+- Can be broken by skilled cryptanalysts using frequency analysis to deduce letter mappings.
+- Not suitable for encrypting very confidential data due to their relative ease of being cracked
+- Securely sharing the substitution key between sender and receiver can be problematic.
+- Limited Key Space due to the limited number of possible substitutions
+
 4. How can frequency analysis be used to break a substitution cipher?
 5. Can you provide an example of a historical use of the substitution cipher?
 
 ### 2. The Affine Cipher
 
 1. What is the affine cipher and how does it combine the shift and substitution ciphers?
-2. How can you encrypt and decrypt messages using the affine cipher?
+2. How can you encrypt and decrypt messages using the<img width="631" alt="Captura de pantalla 2024-01-27 a la(s) 20 04 27" src="https://github.com/emiliasaenz/Security/assets/143628612/8468ebf4-e1a7-467e-861d-ef3a2ceec4b2">
+ affine cipher?
 3. What are the advantages and vulnerabilities of the affine cipher?
 4. How can you break the affine cipher using known plaintext attacks?
 5. Can you provide an example of a practical use of the affine cipher?
