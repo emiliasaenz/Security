@@ -38,13 +38,17 @@ Disadvantages:
 - Limited Key Space due to the limited number of possible substitutions
 
 4. How can frequency analysis be used to break a substitution cipher?
+
+By counting how often each letter appears in the ciphertext and comparing it to the expected frequency of each letter in the language of the plaintex. Also by examing patterns such as common words, letter pairings, and grammatical rules.
+
 5. Can you provide an example of a historical use of the substitution cipher?
+
+The historical use of a substitution cipher is exemplified in the 16th century by Mary, Queen of Scots, during her imprisonment by Queen Elizabeth I of England, where each letter of the alphabet was substituted with a symbol or another letter. Mary utilized a substitution cipher to secretly communicate with her supporters, planning her escape and potentially plotting to assassinate Elizabeth. However, her encrypted messages were intercepted and deciphered by Elizabeth's spymaster, Sir Francis Walsingham, and his cryptanalyst, Thomas Phelippes. The cracking of this cipher exposed Mary's involvement in the Babington Plot, ultimately leading to her trial and execution for treason in 1587. 
 
 ### 2. The Affine Cipher
 
 1. What is the affine cipher and how does it combine the shift and substitution ciphers?
-2. How can you encrypt and decrypt messages using the<img width="631" alt="Captura de pantalla 2024-01-27 a la(s) 20 04 27" src="https://github.com/emiliasaenz/Security/assets/143628612/8468ebf4-e1a7-467e-861d-ef3a2ceec4b2">
- affine cipher?
+2. How can you encrypt and decrypt messages using the affine cipher?
 3. What are the advantages and vulnerabilities of the affine cipher?
 4. How can you break the affine cipher using known plaintext attacks?
 5. Can you provide an example of a practical use of the affine cipher?
