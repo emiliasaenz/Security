@@ -48,10 +48,54 @@ The historical use of a substitution cipher is exemplified in the 16th century b
 ### 2. The Affine Cipher
 
 1. What is the affine cipher and how does it combine the shift and substitution ciphers?
+
+The Affine cipher is a combination of monoalphabetic substitution cipher and Ceasar's shift cipher, where each letter in the alphabet is mapped to its numeric equivalent, encrypted using modular arithmetic, and converted back to a ciphertext letter. The key consists of 2 numbers, a and b. 
+The 'b' value in the formula introduces a linear shift, it determines how far along the alphabet the cipher shifts each letter. The multiplication by 'a'  adds a more complex substitution pattern than a simple shift.
+
+<img width="699" alt="Captura de pantalla 2024-01-28 a la(s) 23 34 41" src="https://github.com/emiliasaenz/Security/assets/143628612/4bd24c40-beab-4a8b-b59a-564cc8f318f4">
+
 2. How can you encrypt and decrypt messages using the affine cipher?
+   
+Encryption:
+The encryption function for a single letter is   
+
+<img width="504" alt="Captura de pantalla 2024-01-28 a la(s) 23 30 33" src="https://github.com/emiliasaenz/Security/assets/143628612/f58d0842-c5a4-45de-b4f6-ba67266a7cf2">
+
+Decryption:
+
+For deciphering, we must find the inverse function on the ciphertext to retrieve the plaintext. The first step is to convert each of the ciphertext letters into their integer values. The decryption function is  
+
+<img width="633" alt="Captura de pantalla 2024-01-28 a la(s) 23 54 13" src="https://github.com/emiliasaenz/Security/assets/143628612/8187729d-6dad-4b83-9afe-68d0f0eda239">
+
+x is an inverse of a
+
 3. What are the advantages and vulnerabilities of the affine cipher?
+
+Advantages:
+
+- By combining linear shifting and multiplication, the affine cipher is more complex and secure than a basic Caesar shift cipher.
+- Is relatively simple to implement, requiring only basic mathematical operations
+- The cipher has more key options than a simple shift cipher, as it uses two keys
+
+Vulnerabilities:
+
+- Is a very insecure cipher
+- The Affine cipher is a substitution cipher, so all the methods that are used to cryptanalyse substitution ciphers can be used for the affine cipher. 
+- Due to its vulnerabilities to various cryptographic attacks, it is not suitable for encrypting large amounts of data or highly sensitive information.
+
+
 4. How can you break the affine cipher using known plaintext attacks?
+
+Breaking the affine cipher with a known plaintext attack involves using specific pairs of plaintext and corresponding ciphertext to determine the cipher's keys. Initially, known pairs of plaintext and ciphertext are translated into numerical values based on their positions in the alphabet (e.g., A=0, B=1). With at least one pair, but ideally two, you set up equations matching the affine cipher's formula. These equations represent the relationship between the plaintext, ciphertext, and the unknown keys 'a' and 'b'. Solving these equations, often through a combination of algebraic manipulation and modular arithmetic, reveals the values of 'a' and 'b'.
+
+For a practical example, if it's known that plaintext 'A' (0) encrypts to ciphertext 'C' (2), and 'B' (1) to 'E' (4), two equations can be formulated: 2 = (0a + b) mod 26 and 4 = (1a + b) mod 26. Solving these equations will yield the values of 'a' and 'b'. In cases where only one pair is known, a brute force approach can be used to guess 'a' and then solve for 'b'. 
+
 5. Can you provide an example of a practical use of the affine cipher?
+
+The affine cipher, due to its simplicity and the level of security it offers, is not commonly used in practical, modern-day applications where high-level security is required
+
+In recreational settings like puzzle books, escape rooms, or certain types of games, the affine cipher can be used to create interesting challenges. Players might need to decrypt a message encrypted with the affine cipher to solve a puzzle or progress in the game.
+
 
 ### 3. The Hill Cipher
 
